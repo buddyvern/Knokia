@@ -69,6 +69,19 @@
     <footer>
         <p>© 2026 Knokia All Rights Reserved.</p>
     </footer>
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight - 100;
+        if (sectionTop < trigger) {
+            section.classList.add("visible");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
